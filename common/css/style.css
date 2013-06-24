@@ -1,0 +1,539 @@
+@charset "utf-8";
+/* =================================================================================================== CSS Information
+Style Info: Hybrid Default
+=================================================================================================================== */
+body {
+	font-size: 13px;
+	font-family: Arial,Helvetica, Verdana, 'ＭＳ Ｐゴシック','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',HiraKakuProN-W3,Osaka,sans-serif;
+	font-family: 'メイリオ', Meiryo;
+	line-height: 1.6;
+	color: #222222;
+	background: #ffffff;
+		-webkit-text-size-adjust: 100%;
+		-webkit-transition: top 150ms ease-out 0;
+		word-break: break-all;
+}
+a{-webkit-tap-highlight-color: #ffff44;}
+a:link, a:visited {color: #15428b;}
+a:hover {color: #8b1542;}
+/* =================================================================================================== CSS Information
+Style Info: CSS - Hybrid Reset
+=================================================================================================================== */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video{text-decoration:none;margin:0;padding:0;}
+article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block;}
+ul,li,ol{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+img{border:none;vertical-align:bottom;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th {text-align: left;}
+caption,th,address,cite,code,dfn{font-style:normal;font-weight:normal;}
+input,textarea,select,code,kbd,samp,pre{font-size:100%;font-family: Arial, Helvetica, Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", sans-serif;}
+abbr,dfn{border:0;font-variant:normal;cursor:help;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+fieldset{vertical-align:bottom;}
+legend{color:#000;}
+input[type="checkbox"]{vertical-align:bottom;}
+input[type="radio"]{height:15px;vertical-align:bottom;}
+input[type="text"]{height:15px;line-height:15px;padding:2px;}
+textarea{vertical-align:bottom;}
+/* =================================================================================================== CSS Information
+Style Info: layout
+=================================================================================================================== */
+/* equal #content padding-Bottom, footer height, footer margin-Top */
+html,body{height:100%;}
+body {
+	background: url(../images/back_body.png) center top;
+}
+#wrapper {
+	width: 100%;
+	min-width: 1000px;
+	min-height:100%;
+	position: relative;
+	margin: 0 auto 0 auto;
+}
+#g_header {
+	background: url(../images/back_header.png) center top;
+	position: relative;
+	width: 100%;
+	min-width: 1000px;
+	height: auto;
+	z-index: 200;
+	box-shadow: 0 2px 3px #999;
+}
+#g_header #g_header_inner {
+	position: relative;
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+#siteid {
+	display: block;
+	width: 280px;
+	height: 100px;
+	margin: 0 0 0 -17px;
+}
+
+#g_search {
+	position: absolute;
+	top: 10px;
+	right: 190px;
+	width: 360px;
+	height: 30px;
+}
+#g_search-text {
+	font-size: 16px;
+	font-weight: bold;
+	background: rgba(255,255,255,0.9);
+	float: left;
+	width: 70%;
+	border-radius: 5px;
+	border: none;
+	height: 30px;
+	padding: 0 5px;
+	vertical-align: middle;
+	box-shadow: inset 0 0 5px rgba(0,0,0,0.25);
+}
+#g_search-submit {
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	background: #24446b;
+	float: right;
+	border: none;
+	border-radius: 5px;
+	padding: 0 15px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: top;
+	box-shadow: inset 0 15px 10px rgba(255,255,255,0.25);
+}
+#nav_sns {
+	position: absolute;
+	top: 5px;
+	right: 2px;
+	height: 39px;
+	overflow: hidden;
+}
+#nav_sns li {
+	float: left;
+	margin: 0 0 0 2px;
+}
+#nav_sns li a {
+	display: block;
+}
+
+#nav_global {
+	font-family: "Times New Roman", Times, serif;
+	position: absolute;
+	top: 50px;
+	right: 5px;
+	height: 30px;
+}
+#nav_global ul {
+	color: #fff;
+	height: 30px;
+	overflow: hidden;
+}
+#nav_global ul li {
+	float: left;
+	margin: 0 0 0 20px;
+}
+#nav_global ul li a {
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: #fff;
+	background: url(../images/nav_global_li_bg.png) left center no-repeat;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 0 0 15px;
+}
+
+
+
+
+
+#g_container {
+	position: relative;
+	width: 100%;
+}
+#nav_category {
+	position: fixed;
+	top: 130px;
+	left: 0;
+	display: inline;
+	z-index: 150;
+}
+#nav_category ul {
+	display: inline;
+	overflow: hidden;
+}
+#nav_category ul li {
+	background: #132742;
+	position: relative;
+	left: -200px;
+	width: 245px;
+	height: 70px;
+	margin: 0 0 5px 0;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	border-radius: 0 5px 5px 0;
+	overflow: hidden;
+	box-shadow: inset 0 25px 50px rgba(57,99,153,0.75),1px 1px 3px #999;
+}
+#nav_category ul li:hover {
+	left: 0;
+}
+#nav_category ul li h2 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 30px;
+	height: 70px;
+	line-height: 30px;
+	writing-mode : vertical-rl;
+	-webkit-writing-mode : vertical-rl; 
+	-moz-writing-mode : vertical-rl; 
+  -moz-transform: translate(-23px,-15px) rotate(90deg);
+	writing-mode: tb-rl;
+	direction: ltr;
+}
+#nav_category ul li div {
+	background: #1b385c;
+	width: 192px;
+	height: 30px;
+	margin: 10px 0 0 0;
+	padding: 10px;
+	overflow: hidden;
+	border-radius: 0 5px 5px 0;
+	box-shadow: inset 0 0px 6px rgba(0,0,0,0.75),inset 0 -1px 1px rgba(255,255,255,0.5);
+}
+#nav_category ul li div .nav_category-btn_entry,
+#nav_category ul li div .nav_category-btn_faq {
+	font-size: 16px;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-align: center;
+	color: #fff;
+	float: left;
+	display: block;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;
+	box-shadow: inset 0 16px 11px rgba(0,0,0,0.2),inset 0 1px 1px rgba(255,255,255,0.5);
+}
+#nav_category ul li div .nav_category-btn_entry {
+	background: #2da3b3;
+	margin: 0 10px 0 0;
+}
+#nav_category ul li div .nav_category-btn_faq {
+	background: #9a957f;
+}
+
+
+#content {
+	background: url(../images/back_container.png) center top;
+	position: relative;
+	width: 980px;
+	margin: 0 auto;
+	z-index: 100;
+	padding: 40px 10px;
+}
+
+
+
+#col_new-entry,
+#col_new-faq {
+	float: left;
+	width: 390px;
+	overflow: hidden;
+}
+#col_new-faq {
+	float: right;
+	width: 380px;
+}
+#col_new-entry h2,
+#col_new-faq h2 {
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #17adc0;
+	margin: 0 0 15px 0;
+}
+#col_new-entry h2 strong,
+#col_new-faq h2 strong {
+	font-size: 30px;
+	font-weight: normal;
+	font-family: "Times New Roman", Times, serif;
+	color: #333;
+	margin: 0 0.5em 0 0;
+}
+
+#col_new-entry article,
+#col_new-faq article {
+	background: #fafafa;
+	width: 360px;
+	margin: 0 0 20px 0;
+	padding: 10px;
+	box-shadow: inset 0 0 5px #999;
+}
+#col_new-entry article h3,
+#col_new-faq article h3 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+}
+#col_new-entry article h3 a,
+#col_new-faq article h3 a {
+	text-decoration: underline;
+	display: block;
+}
+#col_new-entry article .entry_body img,
+#col_new-faq article .entry_body img {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+#col_new-entry article .entry_body .entry_text,
+#col_new-faq article .entry_body .entry_text {
+	margin: 0 0 10px 0;
+}
+#col_new-entry article .entry_body .entry_sns,
+#col_new-faq article .entry_body .entry_sns {
+	text-align: right;
+	overflow: hidden;
+}
+#col_new-entry article .entry_body .entry_sns p,
+#col_new-faq article .entry_body .entry_sns p {
+	float: right;
+	overflow: hidden;
+}
+#col_new-entry article footer,
+#col_new-faq article footer {
+	clear: both;
+	overflow: hidden;
+}
+#col_new-entry article footer .entry_description,
+#col_new-faq article footer .entry_description {
+	width: 50%;
+	float: left;
+	overflow: hidden;
+}
+#col_new-entry article footer .entry_description span,
+#col_new-faq article footer .entry_description span {
+	font-size: 14px;
+	font-weight: bold;
+	color: #1e3e65;
+	margin: 0 10px 0 0;
+}
+#col_new-entry article footer .entry_popler,
+#col_new-faq article footer .entry_popler {
+	width: 50%;
+	overflow: hidden;
+}
+#col_new-entry article footer .entry_popler p,
+#col_new-faq article footer .entry_popler p {
+	color: #fff;
+	background: #bababa;
+	float: right;
+	margin: 0 0 0 10px;
+	padding: 0px 5px;
+	border-radius: 10px;
+	box-shadow: inset 0 5px 10px rgba(255,255,255,0.5);
+}
+#col_new-entry article footer .entry_popler p span,
+#col_new-faq article footer .entry_popler p span {
+	margin: 0 0 0 5px;
+}
+
+
+#col_center {
+	float: left;
+	width: 200px;
+}
+#col_center #login_tab {
+	margin: 0 0 20px 0;
+}
+#col_center #login_tab #login_tab_btn {
+	margin: 0 5px;
+	height: 25px;
+}
+#col_center #login_tab #login_tab_btn a {
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	background: #193960;
+	display: block;
+	float: left;
+	line-height: 25px;
+	padding: 0 15px;
+	border-radius: 5px 5px 0 0;
+	margin: 0 1px 0 0;
+}
+#col_center #login_tab #login_tab_btn a.active {
+	background: #3f5f85;
+}
+#col_center #login_tab #login_tab_btn a:hover {
+	box-shadow: inset 0 5px 10px rgba(255,255,255,0.3);
+}
+#col_center #login_tab #login_tab_login,
+#col_center #login_tab #login_tab_mypage {
+	color: #fff;
+	background: url(../images/login_tab_bg.png) center bottom no-repeat;
+	clear: both;
+	height: 157px;
+	padding: 0 6px;
+	margin: 0 5px;
+}
+#col_center #login_tab #login_tab_mypage {
+	display: none;
+}
+#col_center #login_tab input[type="submit"] {
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-align: center;
+	color: white;
+	background: #28a5b6;
+	float: left;
+	display: block;
+	width: 90px;
+	height: 28px;
+	line-height: 28px;
+	border-radius: 5px;
+	border: 1px solid #28a5b6;
+	box-shadow: inset 0 -10px 15px rgba(255,255,255,0.5);
+	padding: 0;
+	margin: 10px 0 0 44px;
+}
+#col_center #login_tab label {
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	padding: 5px 0 0 0;
+}
+#col_center #login_tab input[type="text"],
+#col_center #login_tab input[type="password"] {
+	font-size: 14px;
+	background: rgba(255, 255, 255, 0.9);
+	float: left;
+	width: 94%;
+	border-radius: 5px;
+	border: none;
+	height: 30px;
+	padding: 0 5px;
+	vertical-align: middle;
+	box-shadow: inset 0 0 5px rgba(0,0,0,0.25);
+}
+#col_center #news_area {
+}
+#col_center #news_area a {
+	display: block;
+}
+
+
+#side_list {
+	color: #fff;
+	background: url(../images/back_side_list.png);
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 142px;
+	height: 100%;
+	min-height: 100%;
+	padding: 10px 10px 0 10px;
+	z-index: 300;
+	overflow-y: scroll;
+}
+#side_list h2 {
+	margin: 10px 0 20px 0;
+}
+#side_list #side_list_frend a {
+	color: #fff;
+	display: block;
+	clear: both;
+	margin: 0 0 15px 0;
+	overflow: hidden;
+}
+#side_list #side_list_frend a:hover {
+	text-decoration: underline;
+}
+#side_list #side_list_frend a img {
+	float: left;
+	vertical-align: top;
+	margin: 0 5px 0 0;
+}
+
+
+
+
+#g_footer {
+	color: #fff;
+	background: url(../images/back_footer.png);
+	width: 100%;
+	min-width: 1000px;
+	margin: 0 auto;
+}
+#g_footer #g_footer_inner {
+	background: url(../images/back_footer_inner.png);
+	position: relative;
+	width: 1000px;
+	min-width: 1000px;
+	height: 110px;
+	margin: 0 auto;
+}
+#nav_footer {
+	font-size: 14px;
+	font-family: "Times New Roman", Times, serif;
+	margin: 0;
+}
+#nav_footer ul {
+	overflow: hidden;
+}
+#nav_footer ul li {
+	float: left;
+	line-height: 35px;
+	margin: 0 15px 0 0;
+}
+#nav_footer ul li a {
+	color: #fff;
+}
+#nav_footer ul li a:hover {
+	text-decoration: underline;
+}
+#g_footer_inner .toPageTop,
+#g_footer_inner #copyright {
+	position: absolute;
+}
+#g_footer_inner .toPageTop {
+	text-align: center;
+	color: #fff;
+	display: block;
+	top: 0;
+	right: 0;
+	width: 128px;
+	height: 35px;
+	line-height: 35px;
+}
+#g_footer_inner #copyright {
+	display: inline;
+	right: 0;
+	bottom: 0;
+	line-height: 30px;
+}
+
+
+
+.clearfix{clear:both;zoom:1;}
+.clearfix:after{content:"";display:block;clear:both;zoom:1;}
